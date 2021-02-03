@@ -6,16 +6,12 @@ pipeline {
                 sh 'echo "test"'
             }
         }
-    }
-}
-pipeline {
-    agent any
-    stages {
         stage('Test') {
             steps {
                 sh 'echo "Fail!"; exit 0'
             }
         }
+        
     }
     post {
         always {
